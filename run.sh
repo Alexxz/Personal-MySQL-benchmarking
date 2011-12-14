@@ -36,6 +36,17 @@ function populateTable(){
 }
 
 
+function performOffsetTest(){
+    echo "Performing offset benchmarking"
+}
+
+function performSequentialAccessTest(){
+    echo "Performing sequential access benchmarking"
+}
 
 createTable
 populateTable
+
+performOffsetTest
+performSequentialAccessTest
+
