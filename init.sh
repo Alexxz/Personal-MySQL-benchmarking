@@ -1,7 +1,6 @@
 #!/bin/bash
 
-MYSQL="mysql -hlocalhost -utest test -A"
-RESTART_MYSQL="sudo service mysqld restart"
+MYSQL="mysql -hlocalhost -utest test -A -v -v -v"
 
 function createTable(){
     echo "Dropping table"
@@ -20,15 +19,17 @@ function createTable(){
 
 function populateTable(){
     echo "Populating table"
+    ## You should choose good numbers for this section by yourself 
+    ## They should be large enough
     for i in $(seq 10 -1 1)
     do  
         echo $i
     
-        for j in $(seq 1 100)
+        for j in $(seq 1 1000)
         do    
-            user1="floor(Rand()*100000)"
-            user2="floor(Rand()*100000)"
-            v="(0,  ${user1}, ${user2}, now(), md5(now()))"
+            user1="floor(Rand()*20)"
+            user2="floor(Rand()*20)"
+            v="(0,  ${user1}, ${user2}, now(), 'messagemessagemessage')"
             values=$(for tmp in $(seq 1 10000); do echo -n "${v},"; done; echo ${v};)
             echo "INSERT INTO messages VALUES ${values}" | $MYSQL
         done
@@ -36,17 +37,7 @@ function populateTable(){
 }
 
 
-function performOffsetTest(){
-    echo "Performing offset benchmarking"
-}
-
-function performSequentialAccessTest(){
-    echo "Performing sequential access benchmarking"
-}
 
 createTable
 populateTable
-
-performOffsetTest
-performSequentialAccessTest
 
