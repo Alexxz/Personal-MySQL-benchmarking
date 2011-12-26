@@ -28,6 +28,10 @@ foreach($tests as $name => $test){
     if(!$res){
         die("There is an error in select query ".mysql_error($conn).PHP_EOL);
     }
+
+
+    $res = mysql_query("SELECT * FROM messages limit 1", $conn);
+    mysql_free_result($res);
     ////////////////////////////////////////////////
     $time = microtime(true);
     
@@ -56,4 +60,5 @@ foreach($tests as $name => $test){
     }
 
     mysql_free_result($res);
+    mysql_close($conn);
 }

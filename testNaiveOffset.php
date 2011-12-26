@@ -26,6 +26,9 @@ foreach($tests as $name => $test){
     }
 
     mysql_select_db($config['db'], $conn) or die("Can't use database {$config['db']}".PHP_EOL);
+
+    $res = mysql_query("SELECT * FROM messages limit 1", $conn);
+    mysql_free_result($res);
     ////////////////////////////////////////////////
 
     $time = microtime(true);
@@ -42,6 +45,7 @@ foreach($tests as $name => $test){
     }
 
     mysql_free_result($res);
+    mysql_close($conn);
 }
 
 
