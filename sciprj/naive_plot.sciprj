@@ -16,8 +16,8 @@ Spacing	5	5
 LayerCanvasSize	420	302
 Alignement	0	0
 <graph>
-ggeometry	0	-2	688	397
-PlotTitle	Зависимость времени выполнения отчисла строк в offset	#000000	4
+ggeometry	0	-2	682	334
+PlotTitle	Зависимость времени выполнения от числа строк в offset	#000000	4
 <Antialiasing>1</Antialiasing>
 Background	#ffffff	255
 Margin	0
@@ -27,15 +27,15 @@ EnabledAxes	1	0	1	0
 AxesTitles	Значение offset, число строк	Время выполнения, мс			
 AxesTitleColors	#000000	#000000	#000000	#000000	
 AxesTitleAlignment	5124	4	4	4
-TitleFont	Ubuntu	13	75	0	0	0
-ScaleFont0	Ubuntu	11	75	0	0	0
-ScaleFont1	Ubuntu	11	75	0	0	0
-ScaleFont2	Ubuntu	11	75	0	0	0
-ScaleFont3	Ubuntu	11	75	0	0	0
-AxisFont0	Ubuntu	11	50	0	0	0
-AxisFont1	Ubuntu	11	50	0	0	0
-AxisFont2	Ubuntu	11	50	0	0	0
-AxisFont3	Ubuntu	11	50	0	0	0
+TitleFont	Ubuntu	11	75	0	0	0
+ScaleFont0	Ubuntu	9	75	0	0	0
+ScaleFont1	Ubuntu	9	75	0	0	0
+ScaleFont2	Ubuntu	9	75	0	0	0
+ScaleFont3	Ubuntu	9	75	0	0	0
+AxisFont0	Ubuntu	9	50	0	0	0
+AxisFont1	Ubuntu	9	50	0	0	0
+AxisFont2	Ubuntu	9	50	0	0	0
+AxisFont3	Ubuntu	9	50	0	0	0
 EnabledTickLabels	1	1	1	1	
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
